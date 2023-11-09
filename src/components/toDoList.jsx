@@ -1,17 +1,17 @@
-import {FaBeer,FaFacebook} from 'react-icons/fa';
+import {FaReact, FaPencilAlt} from 'react-icons/fa';
 import { nanoid } from 'nanoid'; 
 import { useState } from 'react';
 
 export default function ToDoList() {
   const [tasks,setTasks] = useState([
-    {id:nanoid(),task:"Learn React",isCompleted:false},
-    {id:nanoid(),task:"Pass the exam",isCompleted:false},
+    {id:nanoid(),task:"Learn React",isCompleted:false, icon:<FaReact />},
+    {id:nanoid(),task:"Pass the exam",isCompleted:false, icon:<FaPencilAlt />},
     {id:nanoid(),task:"Get a job",isCompleted:false}
   ]);
 
 return(
 <>
-    <h1>To Do List <FaBeer />< FaFacebook/></h1>
+    <h1>To Do List <FaReact/></h1>
 
     <ul className=''>
       {tasks.map((task)=>(
