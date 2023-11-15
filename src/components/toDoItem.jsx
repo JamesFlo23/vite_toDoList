@@ -18,7 +18,7 @@ export default function ToDoItem({task,updateTask,setUpdateTask,onCheckChanged,o
               <input type='checkbox' className='form-check-input' checked={task.isCompleted} onChange={(evt) => onCheckChanged(evt,task)} />
               {task.task}{React.createElement(task.icon)}</label>
               <button className='btn btn-danger ms-5' onClick={() => onDeleteTask(task)}>Delete Task</button>
-              <button className='btn btn-info ms-5' onClick={() => onEditTask(task)}>Edit Task</button>
+              <button className='btn btn-info ms-5 text-white' onClick={() => onEditTask(task)}>Edit Task</button>
             </>
           }      
         </li>

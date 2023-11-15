@@ -4,6 +4,8 @@ import { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import ToDoItem from './toDoItem';
+
+
 export default function ToDoList() {
   
   const [tasks,setTasks] = useState(() =>{
@@ -61,13 +63,6 @@ export default function ToDoList() {
     newTasks[index].editMode = false;
     setTasks(newTasks);
   }
-  // function onUpdateTask(evt){
-  //   // const newTasks = [...tasks];
-  //   // const index = newTasks.indexOf(task);
-  //   // newTasks[index].task = evt.target.value;
-  //   // setTasks(newTasks);
-  //   setUpdateTask(evt.target.value);
-  // }
   const onCancelClick = (task) => {
     const newTasks = [...tasks];
     const index = newTasks.indexOf(task);
@@ -82,11 +77,12 @@ export default function ToDoList() {
       if(evt.target.value === "incomplete") return !task.isCompleted;
     }));
   }
+  
 return(
 <>
     <header className='d-flex'>
       <h1>To Do List {filter}</h1>
-      <select defaultValue='all' className='form-select' aria-label="Default select example" onChange={(evt) => onSelectChange(evt)}>
+      <select defaultValue='all' className='form-select-sm' aria-label="Default select example" onChange={(evt) => onSelectChange(evt)}>
         <option value="all">Show All Items</option>
         <option value="completed">Show Completed Items</option>
         <option value="incomplete">Show Incomplete Items</option>

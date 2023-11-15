@@ -8,10 +8,9 @@ function App() {
 
   return (
     <>
-    <div className='container'>
-
+    <div className='container bg-dark text-white'>
+    <ToDoList />
     </div>
-      <ToDoList />
     </>
   )
 }
